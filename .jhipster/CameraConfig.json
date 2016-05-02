@@ -1,0 +1,38 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "hostname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "3",
+            "fieldValidateRulesMaxlength": "50",
+            "fieldValidateRulesPattern": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$",
+            "fieldValidateRulesPatternJava": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\\\-]*[a-zA-Z0-9])\\\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\\\-]*[A-Za-z0-9])$"
+        },
+        {
+            "fieldName": "ipaddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "3",
+            "fieldValidateRulesMaxlength": "50",
+            "fieldValidateRulesPattern": "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$",
+            "fieldValidateRulesPatternJava": "^(?:[0-9]{1,3}\\\\.){3}[0-9]{1,3}$"
+        }
+    ],
+    "changelogDate": "20160425155445",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "camera_config",
+    "pagination": "pagination"
+}

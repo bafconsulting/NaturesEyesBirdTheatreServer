@@ -1,0 +1,144 @@
+<div>
+    <h2>Analytics</h2>
+
+</div>
+
+    <!--Profile Form-->
+    <div class="modal hide fade" id="myModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                ×</button>
+            <h3>
+                Profile</h3>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal">
+            <legend>Contact Info</legend>
+            <div class="control-group">
+                <label class="control-label" for="txtContactName">
+                    Name</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input class="span4" id="txtContactName" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="txtPhone">
+                    Phone</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-comment"></i></span>
+                        <input class="span4" id="txtPhone" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="txtEmail">
+                    E-mail</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-envelope"></i></span>
+                        <input class="span4" id="txtEmail" type="text">
+                    </div>
+                </div>
+            </div>
+            <legend>Security Info</legend>
+            <div class="control-group">
+                <label class="control-label" for="txtLoginID">
+                    Login ID</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span>
+                        <input class="span4" id="txtLoginID" type="text" value="admin" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="txtPassword">
+                    Password
+                </label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-lock"></i></span>
+                        <input class="span4" id="txtPassword" type="password">
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a> <a href="#"
+                class="btn" data-dismiss="modal">Cancel</a>
+        </div>
+    </div>
+    <!--Container-->
+    <div class="container-fluid">
+        <!--subnav-->
+        <div class="subnav">
+            <ul class="nav nav-pills">
+                <li><a href="#" onclick="javascript:Dashboard.addWidget();">+ Add Widget</a></li>
+                <li><a href="dashboardprinterfriendly.html" target="_blank">Printer Friendly</a></li>
+                <li><a href="#" onclick="javascript:ShowHelp()">Help</a></li>
+            </ul>
+        </div>
+        <!--Dashboad-->
+        <div id="columns" class="row-fluid">
+            <ul id="widget1" class="column ui-sortable unstyled">
+                <li id="Widget1" class="widget">
+                    <div class="widget-head">
+                        <span>Frequency & Recency</span></div>
+                    <div class="widget-content">
+                        <iframe id="iframeWidget1" class="widget-iframe" style="overflow: hidden;" src="app/analytics/widgets/widget1.html">
+                        </iframe>
+                    </div>
+                </li>
+                <li id="Widget4" class="widget">
+                    <div class="widget-head">
+                        <span>Avg. Visit Duration by Territory</span></div>
+                    <div class="widget-content">
+                        <iframe id="iframeWidget4" class="widget-iframe" style="overflow: hidden;" src="app/analytics/widgets/widget4.html">
+                        </iframe>
+                    </div>
+                </li>
+            </ul>
+            <ul id="widget2" class="column ui-sortable unstyled">
+                <li id="Widget2" class="widget">
+                    <div class="widget-head">
+                        <span>Daily Visits</span></div>
+                    <div class="widget-content">
+                        <iframe id="iframeWidget3" class="widget-iframe" style="overflow: hidden;" src="app/analytics/widgets/widget3.html">
+                        </iframe>
+                    </div>
+                </li>
+                <li id="Widget5" class="widget">
+                    <div class="widget-head">
+                        <span>Visits and Pageviews by Devices</span></div>
+                    <div class="widget-content">
+                        <iframe id="iframeWidget5" class="widget-iframe" style="overflow: hidden;" src="app/analytics/widgets/widget5.html">
+                        </iframe>
+                    </div>
+                </li>
+            </ul>
+            <ul id="widget3" class="column ui-sortable unstyled">
+                <li id="Widget3" class="widget">
+                    <div class="widget-head">
+                        <span>Visits by Traffic Type</span></div>
+                    <div class="widget-content">
+                        <iframe id="iframeWidget2" class="widget-iframe" style="overflow: hidden;" src="app/analytics/widgets/widget2.html">
+                        </iframe>
+                    </div>
+                </li>
+                <li id="Widget6" class="widget">
+                    <div class="widget-head">
+                        <span>Live Random Data</span></div>
+                    <div class="widget-content">
+                        <iframe id="iframeWidget6" class="widget-iframe" style="overflow: hidden;" src="app/analytics/widgets/widget6.html">
+                        </iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+

@@ -1,0 +1,90 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration will be overriden by the Spring profile you use,
+# for example application-dev.yml if you use the "dev" profile.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+
+spring:
+    application:
+        name: birdtheatre
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: none
+            naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+    messages:
+        basename: i18n/messages
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: XHTML
+    social:
+        # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret
+        google:
+            clientId: 632897212164-kkua1oaitb70mj8542e277a8dltuev6l.apps.googleusercontent.com
+            clientSecret: CBOK4AAZmihCi1uSuEs6VqB0
+
+        # see https://developers.facebook.com/docs/facebook-login/v2.2
+        facebook:
+            clientId: 161246197584895
+            clientSecret: b5db41d8e60703a3d8b570fecebf4c9b
+
+        # see https://apps.twitter.com/app/
+        twitter:
+            clientId: JRukwmIj69Hyvq48B3MlU5mdy
+            clientSecret: YJV16e7y5oBYOJIrr3IVXoaMLjAi5otudXeCwSqmDrpeRUddWN
+  
+        # see https://www.linkedin.com/developer/apps/
+        linkedin:
+            clientId: 77hgwo4rurmpnj
+            clientSecret: P5Jji4VjY5DGiVsv
+
+        # jhipster-needle-add-social-configuration
+
+security:
+    basic:
+        enabled: false
+
+# ===================================================================
+# JHipster specific properties
+# ===================================================================
+
+jhipster:
+    async:
+        corePoolSize: 2
+        maxPoolSize: 50
+        queueCapacity: 10000
+    #cors: #By default CORS are not enabled. Uncomment to enable.
+        #allowed-origins: "*"
+        #allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+        #allowed-headers: "*"
+        #exposed-headers:
+        #allow-credentials: true
+        #max-age: 1800
+    mail:
+        from: birdtheatre@localhost
+    security:
+        rememberMe:
+            # security key (this key should be unique for your application, and kept secret)
+            key: b14b3996bdd6fe1d14b13d1de3cd4c4dc921fcc3
+    swagger:
+        title: birdtheatre API
+        description: birdtheatre API documentation
+        version: 0.0.1
+        termsOfServiceUrl:
+        contactName:
+        contactUrl:
+        contactEmail:
+        license:
+        licenseUrl:
+    social:
+        redirectAfterSignIn: "/#/home"

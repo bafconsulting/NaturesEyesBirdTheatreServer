@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBroadcastStreamLabel">Create or edit a BroadcastStream</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.broadcastStream.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.broadcastStream.name"
+                    required ng-minlength="5" ng-maxlength="20" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.minlength" translate-value-min="5">
+                    This field is required to be at least 5 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.broadcastStream.description"
+                    required ng-minlength="20" ng-maxlength="200" />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.minlength" translate-value-min="20">
+                    This field is required to be at least 20 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.maxlength">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_startTimestamp">StartTimestamp</label>
+                <div class="input-group">
+                    <input id="field_startTimestamp" type="text" class="form-control" name="startTimestamp" datetime-picker="{{dateformat}}" ng-model="vm.broadcastStream.startTimestamp" is-open="vm.datePickerOpenStatus.startTimestamp"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startTimestamp')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.startTimestamp.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.startTimestamp.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.startTimestamp.$error.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_endTimestamp">EndTimestamp</label>
+                <div class="input-group">
+                    <input id="field_endTimestamp" type="text" class="form-control" name="endTimestamp" datetime-picker="{{dateformat}}" ng-model="vm.broadcastStream.endTimestamp" is-open="vm.datePickerOpenStatus.endTimestamp"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endTimestamp')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.endTimestamp.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.endTimestamp.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.endTimestamp.$error.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="field_cameraConfig">cameraConfig</label>
+            <select class="form-control" id="field_cameraConfig" multiple name="cameraConfig" ng-model="vm.broadcastStream.cameraConfigs" ng-options="cameraConfig as cameraConfig.ipaddress for cameraConfig in vm.cameraconfigs track by cameraConfig.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

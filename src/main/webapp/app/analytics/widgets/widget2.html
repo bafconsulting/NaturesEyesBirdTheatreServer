@@ -1,0 +1,62 @@
+
+    <div id="container">
+    </div>
+    <script type="text/javascript">
+//<![CDATA[
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                height: 220
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.point.name + '</b>: ' + this.percentage + ' %';
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true,
+                    shadow: false
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [
+                     {
+                         name: 'Referral',
+                         y: 67.6,
+                         color: '#058DC7',
+                         shadow: false
+                     },
+                     {
+                         name: 'Organic',
+                         y: 23.2,
+                         sliced: true,
+                         selected: true,
+                         color: '#50B432',
+                         shadow: false
+                     },
+                     {
+                         name: 'Direct',
+                         y: 9.2,
+                         color: '#ED561B',
+                         shadow: false
+                     }
+                ]
+            }]
+        });
+//]]>
+    </script>
+

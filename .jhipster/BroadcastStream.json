@@ -1,0 +1,54 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "cameraConfig",
+            "otherEntityName": "cameraConfig",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "ipaddress",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "5",
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "20",
+            "fieldValidateRulesMaxlength": "200"
+        },
+        {
+            "fieldName": "startTimestamp",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endTimestamp",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160425155043",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "broadcast_stream",
+    "pagination": "pagination"
+}

@@ -1,0 +1,40 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-4">
+            <span class="hipster img-responsive img-rounded"></span>
+        </div>
+        <div class="col-md-8">
+            <h1>Welcome to Bird Theatre by Natures Eyes</h1>
+            <p class="lead">The application is freemium, signup, login and give it it try. You can subscribe from the setting drop down after sign in. Hardware is required to use the service, you can buy it from our marketplace or get your own. A client app will be made in the future</p>
+
+            <div ng-switch="vm.isAuthenticated()">
+                <div class="alert alert-success" ng-switch-when="true">
+                    You are logged in as user "{{vm.account.login}}".
+                </div>
+
+                <div class="alert alert-warning" ng-switch-when="false">
+                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
+                </div>
+
+                <div class="alert alert-warning" ng-switch-when="false">
+                    You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
+                </div>
+            </div>
+
+            <p>
+                If you have any question on Bird Theatre by Natures Eyes refer to the below links:
+            </p>
+
+            <ul>
+                <li><span class="glyphicon glyphicon-info-sign"></span><span class="hidden-sm"><a ui-sref="instructions" ng-click="vm.navCollapsed = true">&nbsp;Instructions (Hardware Requirements)</a></span></li>
+                <li><span class="glyphicon glyphicon-tasks"></span><span class="hidden-sm"><a ui-sref="tasks" ng-click="vm.navCollapsed = true">&nbsp;Tasks</a></span></li>
+                <li><span class="glyphicon glyphicon-font"></span><span class="hidden-sm"><a ui-sref="about" ng-click="vm.navCollapsed = true">&nbsp;About</a></span></li>
+                <li><span class="glyphicon glyphicon-question-sign"></span><span class="hidden-sm"><a href="http://stackoverflow.com/tags/natureseyes/info" target="_blank">&nbsp;Natures Eyes on Stack Overflow (Help Desk)</a></span></li>
+            </ul>
+
+            <p>
+             <span>If you like Natures Eyes, don't forget to like or share </span>!
+            </p>
+        </div>
+    </div>
+</div>

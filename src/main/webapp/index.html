@@ -1,0 +1,272 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bird Theatre</title>
+    <meta property="og:title" name="title" content="Bird Theatre by Natures Eyes" />
+    <meta property="og:description" name="description" content="Bird Theatre is a application to connect a cloud based bird house or bird feeder for analytics, entertainment and eduicational purposes.">
+    <meta itemprop="description" content="Bird Theatre is a application to connect a cloud based bird house or bird feeder for analytics, entertainment and eduicational purposes.">
+	<meta property="og:site_name" name="site_name" content="Natures Eyes" />
+	<meta property="og:type" name="type" content="website" />
+	<meta property="og:url" name="url" content="http://www.birdtheatre.natureseyes.com" />
+	<meta property="og:image" name="image" content="http://ia.media-imdb.com/images/rock.jpg" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@NaturesEyes" />
+    <meta name="twitter:creator" content="@NaturesEyes" />
+    <meta name="twitter:title" content="Bird Theatre by Natures Eyes" />
+    <meta name="twitter:description" content="Bird Theatre by Natures Eyes" />
+    <meta name="twitter:image" content="http://XXXX/static/images/XXXX.jpg" />
+    
+    <link rel="icon" href="/static/images/XXXX-logo-favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/static/images/XXXX-logo-square.png" />
+    <meta name="apple-mobile-web-app-title" content="Natures Eyes" />
+    
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css content/css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="content/css/vendor.css">
+    <!-- endbuild -->
+    <!-- build:css content/css/main.css -->
+    <link rel="stylesheet" href="content/css/main.css">
+    <link rel="stylesheet" href="content/css/toolbar.css" type="text/css" />
+    <!-- build:css content/css/footer.css -->
+    <link rel="stylesheet" href="content/css/footer.css">
+    <!-- endbuild -->
+    <!-- TurnSocial ToolBar 
+	<script type="text/javascript">
+	(function() {
+	  var t = document.createElement('script'); t.type = 'text/javascript'; t.async = true;
+	  t.src = "//turnsocial.com/bar/47bd121b3ef4209cedbcee69445bb355.js";
+	  var s = document.getElementsByTagName('script')[0];
+	  s.parentNode.insertBefore(t, s);
+	})();
+	</script> -->
+</head>
+<body ng-app="birdtheatreApp">
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak></div>
+    <div ui-view="navbar" ng-cloak></div>
+    <div class="container">
+        <div class="well" ui-view="content"></div>
+
+<div class="fullscreen-bg">
+    <video loop muted autoplay poster="content/video/thumbnail.png" class="fullscreen-bg__video">
+        <source src="content/video/iStock_12196651_HD_BIG_WEB_MP4.mp4" type="video/mp4">  
+    </video>
+</div>
+
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy;Copyright Bird Theatre 2016 by Natures Eyes. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+<!-- <div class="footer-background">
+      <footer>
+        <div class="logo">emplify.io</div>
+        <div class="footer__container">
+          <section class="footer__links">
+            <ul>
+              <li><a href="/">For Agencies</a>
+              <li><a href="/for-brands">For Brands</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="https://blog.emplify.io" target="_blank">Blog</a></li>
+              <li><a href="/privacy-policy">Privacy Policy</a>
+            </ul>
+          </section>
+          <small class="copyright">A product by Rebase Labs Inc. © 2015 Rebase Labs Inc.</small>
+        </div>
+      </footer>  --> 
+      
+    <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="app/layouts/toolbar/share.js"></script> 
+	 <script type="text/javascript" src="app/layouts/toolbar/js.cookie.js"></script>  -->
+	
+    <!-- build:js app/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
+    <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
+    
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js app/app.js  -->
+    <!-- inject:js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/account/social/directive/social.directive.js"></script>
+    <script src="app/account/reset/request/reset.request.state.js"></script>
+    <script src="app/account/reset/request/reset.request.controller.js"></script>
+    <script src="app/account/reset/finish/reset.finish.state.js"></script>
+    <script src="app/account/reset/finish/reset.finish.controller.js"></script>
+    <script src="app/services/user/user.service.js"></script>
+    <script src="app/services/auth/sessions.service.js"></script>
+    <script src="app/services/auth/register.service.js"></script>
+    <script src="app/services/auth/principal.service.js"></script>
+    <script src="app/services/auth/password.service.js"></script>
+    <script src="app/services/auth/password-reset-init.service.js"></script>
+    <script src="app/services/auth/password-reset-finish.service.js"></script>
+    <script src="app/services/auth/has-authority.directive.js"></script>
+    <script src="app/services/auth/has-any-authority.directive.js"></script>
+    <script src="app/services/auth/auth.session.service.js"></script>
+    <script src="app/services/auth/auth.service.js"></script>
+    <script src="app/services/auth/activate.service.js"></script>
+    <script src="app/services/auth/account.service.js"></script>
+    <script src="app/layouts/navbar/navbar.controller.js"></script>
+    <script src="app/layouts/navbar/active-link.directive.js"></script>
+    <script src="app/layouts/error/error.state.js"></script>
+    <script src="app/entities/camera-config/camera-config.state.js"></script>
+    <script src="app/entities/camera-config/camera-config.service.js"></script>
+    <script src="app/entities/camera-config/camera-config.search.service.js"></script>
+    <script src="app/entities/camera-config/camera-config.controller.js"></script>
+    <script src="app/entities/camera-config/camera-config-dialog.controller.js"></script>
+    <script src="app/entities/camera-config/camera-config-detail.controller.js"></script>
+    <script src="app/entities/camera-config/camera-config-delete-dialog.controller.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream.state.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream.service.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream.search.service.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream.controller.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream-dialog.controller.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream-detail.controller.js"></script>
+    <script src="app/entities/broadcast-stream/broadcast-stream-delete-dialog.controller.js"></script>
+    <script src="app/components/util/truncate-words.filter.js"></script>
+    <script src="app/components/util/truncate-characters.filter.js"></script>
+    <script src="app/components/util/sort.directive.js"></script>
+    <script src="app/components/util/sort-by.directive.js"></script>
+    <script src="app/components/util/parse-links.service.js"></script>
+    <script src="app/components/util/pagination-util.service.js"></script>
+    <script src="app/components/util/jhi-item-count.directive.js"></script>
+    <script src="app/components/util/date-util.service.js"></script>
+    <script src="app/components/util/data-util.service.js"></script>
+    <script src="app/components/util/capitalize.filter.js"></script>
+    <script src="app/components/util/base64.service.js"></script>
+    <script src="app/components/login/login.service.js"></script>
+    <script src="app/components/login/login.controller.js"></script>
+    <script src="app/components/form/uib-pagination.config.js"></script>
+    <script src="app/components/form/uib-pager.config.js"></script>
+    <script src="app/components/form/show-validation.directive.js"></script>
+    <script src="app/components/form/pagination.constants.js"></script>
+    <script src="app/components/form/minbytes.directive.js"></script>
+    <script src="app/components/form/maxbytes.directive.js"></script>
+    <script src="app/components/alert/alert.service.js"></script>
+    <script src="app/components/alert/alert.directive.js"></script>
+    <script src="app/components/alert/alert-error.directive.js"></script>
+    <script src="app/components/visualizer/j-visualizer.min.js"></script>
+    <script src="app/components/highcharts/js/highcharts.js"></script>
+    <script src="app/blocks/interceptor/notification.interceptor.js"></script>
+    <script src="app/blocks/interceptor/errorhandler.interceptor.js"></script>
+    <script src="app/blocks/interceptor/auth-expired.interceptor.js"></script>
+    <script src="app/blocks/handlers/state.handler.js"></script>
+    <script src="app/blocks/config/localstorage.config.js"></script>
+    <script src="app/blocks/config/http.config.js"></script>
+    <script src="app/blocks/config/compile.config.js"></script>
+    <script src="app/blocks/config/alert.config.js"></script>
+    <script src="app/admin/user-management/user-management.state.js"></script>
+    <script src="app/admin/user-management/user-management.controller.js"></script>
+    <script src="app/admin/user-management/user-management-dialog.controller.js"></script>
+    <script src="app/admin/user-management/user-management-detail.controller.js"></script>
+    <script src="app/admin/user-management/user-management-delete-dialog.controller.js"></script>
+    <script src="app/admin/tracker/tracker.state.js"></script>
+    <script src="app/admin/tracker/tracker.service.js"></script>
+    <script src="app/admin/tracker/tracker.controller.js"></script>
+    <script src="app/admin/metrics/metrics.state.js"></script>
+    <script src="app/admin/metrics/metrics.service.js"></script>
+    <script src="app/admin/metrics/metrics.modal.controller.js"></script>
+    <script src="app/admin/metrics/metrics.controller.js"></script>
+    <script src="app/admin/logs/logs.state.js"></script>
+    <script src="app/admin/logs/logs.service.js"></script>
+    <script src="app/admin/logs/logs.controller.js"></script>
+    <script src="app/admin/health/health.state.js"></script>
+    <script src="app/admin/health/health.service.js"></script>
+    <script src="app/admin/health/health.modal.controller.js"></script>
+    <script src="app/admin/health/health.controller.js"></script>
+    <script src="app/admin/docs/docs.state.js"></script>
+    <script src="app/admin/configuration/configuration.state.js"></script>
+    <script src="app/admin/configuration/configuration.service.js"></script>
+    <script src="app/admin/configuration/configuration.controller.js"></script>
+    <script src="app/admin/audits/audits.state.js"></script>
+    <script src="app/admin/audits/audits.service.js"></script>
+    <script src="app/admin/audits/audits.controller.js"></script>
+    <script src="app/account/social/social.state.js"></script>
+    <script src="app/account/social/social.service.js"></script>
+    <script src="app/account/social/social-register.controller.js"></script>
+    <script src="app/account/settings/settings.state.js"></script>
+    <script src="app/account/settings/settings.controller.js"></script>
+    <script src="app/account/subscription/subscription.state.js"></script>
+    <script src="app/account/subscription/subscription.controller.js"></script>
+    <script src="app/account/sessions/sessions.state.js"></script>
+    <script src="app/account/sessions/sessions.controller.js"></script>
+    <script src="app/account/register/register.state.js"></script>
+    <script src="app/account/register/register.controller.js"></script>
+    <script src="app/account/password/password.state.js"></script>
+    <script src="app/account/password/password.controller.js"></script>
+    <script src="app/account/password/password-strength-bar.directive.js"></script>
+    <script src="app/account/activate/activate.state.js"></script>
+    <script src="app/account/activate/activate.controller.js"></script>
+    <script src="app/home/home.state.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/about/about.state.js"></script>
+    <script src="app/about/about.controller.js"></script>   
+    <script src="app/tasks/tasks.state.js"></script>
+    <script src="app/tasks/tasks.controller.js"></script>
+    <script src="app/instructions/instructions.state.js"></script>
+    <script src="app/instructions/instructions.controller.js"></script>
+    <script src="app/analytics/analytics.state.js"></script>
+    <script src="app/analytics/analytics.controller.js"></script>
+    <script src="app/account/marketplace/marketplace.state.js"></script>
+    <script src="app/account/marketplace/marketplace.controller.js"></script>
+    <script src="app/socialDashboard/dashboard.state.js"></script>
+    <script src="app/socialDashboard/dashboard.controller.js"></script>
+    <script src="app/entities/entity.state.js"></script>
+    <script src="app/admin/admin.state.js"></script>
+    <script src="app/account/account.state.js"></script>
+    <script src="app/app.state.js"></script>
+    <script src="app/app.constants.js"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+</html>
