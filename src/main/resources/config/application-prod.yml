@@ -42,13 +42,35 @@ spring:
             cluster-name:
             cluster-nodes: localhost:9300
     mail:
-        host: localhost
+        host: birdtheatre@localhost
         port: 25
         username:
         password:
     thymeleaf:
         cache: true
+    social:
+        # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret
+        google:
+            clientId: 632897212164-f95ijuf7s1ot6eo98k3bc8otddpatpun.apps.googleusercontent.com
+            clientSecret: 8u8LJbU7E-pc2E6voaqe7A2u
 
+        # see https://developers.facebook.com/docs/facebook-login/v2.2
+        #facebook:
+        #    clientId: 161246197584895
+        #    clientSecret: b5db41d8e60703a3d8b570fecebf4c9b
+
+        # see https://apps.twitter.com/app/
+        #twitter:
+        #    clientId: JRukwmIj69Hyvq48B3MlU5mdy
+        #    clientSecret: YJV16e7y5oBYOJIrr3IVXoaMLjAi5otudXeCwSqmDrpeRUddWN
+  
+        # see https://www.linkedin.com/developer/apps/
+        #linkedin:
+        #    clientId: 77hgwo4rurmpnj
+        #    clientSecret: P5Jji4VjY5DGiVsv
+
+        # jhipster-needle-add-social-configuration
+        
 liquibase:
     contexts: prod
 

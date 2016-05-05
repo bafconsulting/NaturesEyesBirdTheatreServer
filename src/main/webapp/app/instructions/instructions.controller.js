@@ -5,7 +5,7 @@ angular
     .module('birdtheatreApp')
     .controller('InstructionsController', InstructionsController);
 
-AboutController.$inject = ['$scope', 'Principal', 'LoginService'];
+InstructionsController.$inject = ['$scope', 'Principal', 'LoginService'];
 
 function InstructionsController ($scope, Principal, LoginService) {
     var vm = this;

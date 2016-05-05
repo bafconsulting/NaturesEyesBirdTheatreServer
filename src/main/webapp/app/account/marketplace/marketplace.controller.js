@@ -2,7 +2,7 @@
 'use strict';
 
 angular
-    .module('natureseyesApp')
+    .module('birdtheatreApp')
     .controller('MarketplaceController', MarketplaceController);
 
 MarketplaceController.$inject = ['$scope', 'Principal', 'LoginService'];

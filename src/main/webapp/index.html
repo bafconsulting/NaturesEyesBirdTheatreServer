@@ -71,18 +71,18 @@
     
 <!-- <div class="footer-background">
       <footer>
-        <div class="logo">emplify.io</div>
+        <div class="logo"></div>
         <div class="footer__container">
           <section class="footer__links">
             <ul>
               <li><a href="/">For Agencies</a>
               <li><a href="/for-brands">For Brands</a></li>
               <li><a href="/about">About Us</a></li>
-              <li><a href="https://blog.emplify.io" target="_blank">Blog</a></li>
+              <li><a href="https://blog" target="_blank">Blog</a></li>
               <li><a href="/privacy-policy">Privacy Policy</a>
             </ul>
           </section>
-          <small class="copyright">A product by Rebase Labs Inc. © 2015 Rebase Labs Inc.</small>
+          <small class="copyright"></small>
         </div>
       </footer>  --> 
       
@@ -118,19 +118,6 @@
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
     <script src="bower_components/sockjs-client/dist/sockjs.js"></script>
     <script src="bower_components/stomp-websocket/lib/stomp.min.js"></script>
-    
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -191,11 +178,10 @@
     <script src="app/components/form/pagination.constants.js"></script>
     <script src="app/components/form/minbytes.directive.js"></script>
     <script src="app/components/form/maxbytes.directive.js"></script>
+    <script src="app/components/analytics/script.js"></script>
     <script src="app/components/alert/alert.service.js"></script>
     <script src="app/components/alert/alert.directive.js"></script>
     <script src="app/components/alert/alert-error.directive.js"></script>
-    <script src="app/components/visualizer/j-visualizer.min.js"></script>
-    <script src="app/components/highcharts/js/highcharts.js"></script>
     <script src="app/blocks/interceptor/notification.interceptor.js"></script>
     <script src="app/blocks/interceptor/errorhandler.interceptor.js"></script>
     <script src="app/blocks/interceptor/auth-expired.interceptor.js"></script>
@@ -230,13 +216,13 @@
     <script src="app/admin/audits/audits.state.js"></script>
     <script src="app/admin/audits/audits.service.js"></script>
     <script src="app/admin/audits/audits.controller.js"></script>
+    <script src="app/account/subscription/subscription.state.js"></script>
+    <script src="app/account/subscription/subscription.controller.js"></script>
     <script src="app/account/social/social.state.js"></script>
     <script src="app/account/social/social.service.js"></script>
     <script src="app/account/social/social-register.controller.js"></script>
     <script src="app/account/settings/settings.state.js"></script>
     <script src="app/account/settings/settings.controller.js"></script>
-    <script src="app/account/subscription/subscription.state.js"></script>
-    <script src="app/account/subscription/subscription.controller.js"></script>
     <script src="app/account/sessions/sessions.state.js"></script>
     <script src="app/account/sessions/sessions.controller.js"></script>
     <script src="app/account/register/register.state.js"></script>
@@ -244,25 +230,27 @@
     <script src="app/account/password/password.state.js"></script>
     <script src="app/account/password/password.controller.js"></script>
     <script src="app/account/password/password-strength-bar.directive.js"></script>
-    <script src="app/account/activate/activate.state.js"></script>
-    <script src="app/account/activate/activate.controller.js"></script>
-    <script src="app/home/home.state.js"></script>
-    <script src="app/home/home.controller.js"></script>
-    <script src="app/about/about.state.js"></script>
-    <script src="app/about/about.controller.js"></script>   
-    <script src="app/tasks/tasks.state.js"></script>
-    <script src="app/tasks/tasks.controller.js"></script>
-    <script src="app/instructions/instructions.state.js"></script>
-    <script src="app/instructions/instructions.controller.js"></script>
-    <script src="app/analytics/analytics.state.js"></script>
-    <script src="app/analytics/analytics.controller.js"></script>
     <script src="app/account/marketplace/marketplace.state.js"></script>
     <script src="app/account/marketplace/marketplace.controller.js"></script>
+    <script src="app/account/activate/activate.state.js"></script>
+    <script src="app/account/activate/activate.controller.js"></script>
+    <script src="app/visualizer/visualizer.state.js"></script>
+    <script src="app/visualizer/visualizer.controller.js"></script>
+    <script src="app/tasks/tasks.state.js"></script>
+    <script src="app/tasks/tasks.controller.js"></script>
     <script src="app/socialDashboard/dashboard.state.js"></script>
     <script src="app/socialDashboard/dashboard.controller.js"></script>
+    <script src="app/instructions/instructions.state.js"></script>
+    <script src="app/instructions/instructions.controller.js"></script>
+    <script src="app/home/home.state.js"></script>
+    <script src="app/home/home.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>
+    <script src="app/analytics/analytics.state.js"></script>
+    <script src="app/analytics/analytics.controller.js"></script>
     <script src="app/admin/admin.state.js"></script>
     <script src="app/account/account.state.js"></script>
+    <script src="app/about/about.state.js"></script>
+    <script src="app/about/about.controller.js"></script>
     <script src="app/app.state.js"></script>
     <script src="app/app.constants.js"></script>
     <!-- endinject -->

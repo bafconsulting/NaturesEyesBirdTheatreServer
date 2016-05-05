@@ -23,15 +23,8 @@
             <span>{{vm.broadcastStream.endTimestamp | date:'medium'}}</span>
         </dd>
         <hr>
-        <dt><span>cameraConfig</span></dt>
-        <dd>
-            <span ng-repeat="cameraConfig in vm.broadcastStream.cameraConfigs">
-                <a ui-sref="camera-config-detail({id: {{cameraConfig.id}}})">{{cameraConfig.ipaddress}}</a>{{$last ? '' : ', '}}
-            </span>
-        </dd>
-        <hr>
     </dl>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ipfxrDPpnBg" frameborder="0" allowfullscreen></iframe>
+
     <button type="submit"
             onclick="window.history.back()"
             class="btn btn-info">

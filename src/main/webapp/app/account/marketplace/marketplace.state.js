@@ -2,7 +2,7 @@
 'use strict';
 
 angular
-    .module('natureseyesApp')
+    .module('birdtheatreApp')
     .config(stateConfig);
 
 stateConfig.$inject = ['$stateProvider'];

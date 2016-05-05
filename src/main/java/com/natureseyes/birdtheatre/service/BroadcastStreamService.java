@@ -302,7 +302,6 @@ public class BroadcastStreamService {
                 
         result = broadcastStreamRepository.save(broadcastStream);
         broadcastStreamSearchRepository.save(result);
-        
         return result;
     }
 
@@ -328,7 +327,7 @@ public class BroadcastStreamService {
     @Transactional(readOnly = true) 
     public BroadcastStream findOne(Long id) {
         log.debug("Request to get BroadcastStream : {}", id);
-        BroadcastStream broadcastStream = broadcastStreamRepository.findOneWithEagerRelationships(id);
+        BroadcastStream broadcastStream = broadcastStreamRepository.findOne(id);
         return broadcastStream;
     }
 

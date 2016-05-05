@@ -5,12 +5,11 @@
         .module('birdtheatreApp')
         .controller('BroadcastStreamDialogController', BroadcastStreamDialogController);
 
-    BroadcastStreamDialogController.$inject = ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'BroadcastStream', 'CameraConfig'];
+    BroadcastStreamDialogController.$inject = ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'BroadcastStream'];
 
-    function BroadcastStreamDialogController ($scope, $stateParams, $uibModalInstance, entity, BroadcastStream, CameraConfig) {
+    function BroadcastStreamDialogController ($scope, $stateParams, $uibModalInstance, entity, BroadcastStream) {
         var vm = this;
         vm.broadcastStream = entity;
-        vm.cameraconfigs = CameraConfig.query();
         vm.load = function(id) {
             BroadcastStream.get({id : id}, function(result) {
                 vm.broadcastStream = result;

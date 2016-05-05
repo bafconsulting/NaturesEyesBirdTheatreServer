@@ -41,28 +41,6 @@
         </createTable>
         <dropDefaultValue tableName="broadcast_stream" columnName="start_timestamp" columnDataType="datetime"/>
         <dropDefaultValue tableName="broadcast_stream" columnName="end_timestamp" columnDataType="datetime"/>
-                <createTable tableName="broadcast_stream_camera_config">
-            <column name="camera_configs_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-            <column name="broadcast_streams_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-        </createTable>
-
-        <addPrimaryKey columnNames="broadcast_streams_id, camera_configs_id" tableName="broadcast_stream_camera_config"/>
-
-        <addForeignKeyConstraint baseColumnNames="broadcast_streams_id"
-                                 baseTableName="broadcast_stream_camera_config"
-                                 constraintName="fk_broadcast_stream_camera_config_cameraconfig_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="broadcast_stream"/>
-
-        <addForeignKeyConstraint baseColumnNames="camera_configs_id"
-                                 baseTableName="broadcast_stream_camera_config"
-                                 constraintName="fk_broadcast_stream_camera_config_broadcaststream_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="camera_config"/>
         
     </changeSet>
 </databaseChangeLog>

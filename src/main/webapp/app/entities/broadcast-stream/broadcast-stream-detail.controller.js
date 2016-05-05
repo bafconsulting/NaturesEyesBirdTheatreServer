@@ -5,9 +5,9 @@
         .module('birdtheatreApp')
         .controller('BroadcastStreamDetailController', BroadcastStreamDetailController);
 
-    BroadcastStreamDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'BroadcastStream', 'CameraConfig'];
+    BroadcastStreamDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'BroadcastStream'];
 
-    function BroadcastStreamDetailController($scope, $rootScope, $stateParams, entity, BroadcastStream, CameraConfig) {
+    function BroadcastStreamDetailController($scope, $rootScope, $stateParams, entity, BroadcastStream) {
         var vm = this;
         vm.broadcastStream = entity;
         vm.load = function (id) {

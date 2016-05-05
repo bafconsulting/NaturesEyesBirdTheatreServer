@@ -3,7 +3,7 @@
 
 angular
     .module('birdtheatreApp')
-    .controller('DashboardController', TasksController);
+    .controller('DashboardController', DashboardController);
 
 DashboardController.$inject = ['$scope', 'Principal', 'LoginService'];
 

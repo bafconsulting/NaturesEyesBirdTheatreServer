@@ -8,8 +8,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -44,13 +42,6 @@ public class BroadcastStream implements Serializable {
     @NotNull
     @Column(name = "end_timestamp", nullable = false)
     private ZonedDateTime endTimestamp;
-
-    @ManyToMany
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "broadcast_stream_camera_config",
-               joinColumns = @JoinColumn(name="broadcast_streams_id", referencedColumnName="ID"),
-               inverseJoinColumns = @JoinColumn(name="camera_configs_id", referencedColumnName="ID"))
-    private Set<CameraConfig> cameraConfigs = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -90,14 +81,6 @@ public class BroadcastStream implements Serializable {
 
     public void setEndTimestamp(ZonedDateTime endTimestamp) {
         this.endTimestamp = endTimestamp;
-    }
-
-    public Set<CameraConfig> getCameraConfigs() {
-        return cameraConfigs;
-    }
-
-    public void setCameraConfigs(Set<CameraConfig> cameraConfigs) {
-        this.cameraConfigs = cameraConfigs;
     }
 
     @Override

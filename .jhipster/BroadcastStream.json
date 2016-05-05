@@ -1,13 +1,5 @@
 {
-    "relationships": [
-        {
-            "relationshipName": "cameraConfig",
-            "otherEntityName": "cameraConfig",
-            "relationshipType": "many-to-many",
-            "otherEntityField": "ipaddress",
-            "ownerSide": true
-        }
-    ],
+    "relationships": [],
     "fields": [
         {
             "fieldName": "name",
