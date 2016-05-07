@@ -10,7 +10,7 @@ import com.natureseyes.birdtheatre.domain.SocialUserConnection;
 import com.natureseyes.birdtheatre.repository.search.BroadcastStreamSearchRepository;
 import com.natureseyes.birdtheatre.repository.search.UserSearchRepository;
 import com.natureseyes.birdtheatre.security.SecurityUtils;
-import com.natureseyes.birdtheatre.domain.CameraConfig;
+//import com.natureseyes.birdtheatre.domain.CameraConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -293,8 +293,10 @@ public class BroadcastStreamService {
         }
        //CameraConfig tester = broadcastStream.getCameraConfigs();
         
-       SSH2ConnectService ssh2connect = new SSH2ConnectService();
-                ssh2connect.sshConnect();
+       //SSH2ConnectService ssh2connect = new SSH2ConnectService();
+       //ssh2connect.sshConnect();
+        
+        
         //embedHtml
         //youtubeBroadcastSearchRepository.save(result);
         //youtubeBroadcastRepository.save(result);

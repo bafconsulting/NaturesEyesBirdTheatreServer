@@ -10,7 +10,7 @@ services:
             - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/birdtheatre?useUnicode=true&characterEncoding=utf8&useSSL=false
             - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
         ports:
-            - 8080:8080
+            - 3000:3000
     birdtheatre-mysql:
         extends:
             file: mysql.yml

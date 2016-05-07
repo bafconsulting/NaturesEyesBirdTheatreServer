@@ -4,7 +4,7 @@
     "baseName": "birdtheatre",
     "packageName": "com.natureseyes.birdtheatre",
     "packageFolder": "com/natureseyes/birdtheatre",
-    "serverPort": "8080",
+    "serverPort": "3000",
     "authenticationType": "session",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": "hazelcast",
