@@ -23,5 +23,16 @@
       "cucumber"
     ],
     "enableTranslation": false
+  },
+  "generator-jhipster-swagger-cli": {
+    "apis": {
+      "birdtheatre": {
+        "spec": "http://localhost:9000/v2/api-docs",
+        "cliTypes": [
+          "front",
+          "back"
+        ]
+      }
+    }
   }
 }
